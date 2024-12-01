@@ -13,6 +13,14 @@ class Search(BaseModel):
         index = search_string.find(keyword)
 
         if type(index) == int:
+            print(index)
             return True
         
         return False
+    
+
+s = Search()
+print(s.search_string)
+print(s.keyword)
+
+s.do_search(s.search_string, s.keyword)
